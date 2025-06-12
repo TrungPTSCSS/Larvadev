@@ -1,0 +1,7 @@
+section {
+  height: 100vh;
+
+  .title-sub {
+    @include subTitle(true);
+  }
+}
