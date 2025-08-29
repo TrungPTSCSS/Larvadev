@@ -1,2 +1,42 @@
 // css footer
-footer {}
+footer {
+  padding: 46px 0;
+  background: $main-bg-cl;
+
+  .logo {
+    @include text(24px, ITBOLD, 24px, $white-cl, none);
+    margin-bottom: 12px;
+  }
+
+  .sub {
+    @include text(18px, ITBOLD, 18px, $white-cl, none);
+    margin-bottom: 18px;
+  }
+
+  .text {
+    @include text(12px, ITREGULAR, 12px, $white-cl, uppercase);
+    letter-spacing: normal;
+    line-height: 22px;
+  }
+
+  .follow_us {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+
+    &-icon {
+      width: 26px;
+      height: 26px;
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      cursor: pointer;
+
+      img {
+        @include midimg();
+      }
+    }
+  }
+}

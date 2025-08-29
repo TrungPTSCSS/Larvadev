@@ -123,6 +123,11 @@ table {
 	border-spacing: 0;
 }
 
+ul li a{
+	color: $black-cl;
+	text-decoration: none;
+}
+
 *::before,
 *::after {
 	box-sizing: inherit;

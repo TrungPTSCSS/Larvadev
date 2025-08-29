@@ -1,0 +1,26 @@
+.nav {
+  height: 100%;
+  ul {
+  display: flex;
+  height: 100%;
+  li {
+    padding: 0 12px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    a {
+      height: fit-content;
+      @include text(16px, ITBOLD, 16px, $white-cl, none);
+      transition: $t;
+      opacity: 0.4;
+    }
+    &.active a{
+      opacity: 0.8;
+    }
+    &:hover a{
+      opacity: 0.8;
+    }
+  }
+}
+}

@@ -17,7 +17,7 @@ html,
 body {
   width: 100%;
   height: 100vh;
-  overflow-y: scroll;
+  // overflow-y: scroll;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -34,13 +34,13 @@ body {
 
   .container {
     width: 100%;
-    padding: 0 40px;
+    padding: 0 60px;
     margin-right: auto;
     margin-left: auto;
   }
 
   .container-fluid {
-    padding: 0 55px;
+    padding: 0 60px;
 
     @include xs {
       padding-right: 15px;
@@ -58,6 +58,10 @@ body {
     margin-left: -15px;
   }
 
+  .relative{
+    position: relative;
+  }
+
   .no-gutters {
     margin-right: 0;
     margin-left: 0;
@@ -70,45 +74,48 @@ body {
   }
 
   @media (min-width: $xxs-min) {
-    .container {
-      max-width: 540px;
-    }
+    // .container {
+    //   max-width: 540px;
+    // }
   }
 
   @media (min-width: $xs-min) {
-    .container {
-      max-width: 720px;
-    }
+    // .container {
+    //   max-width: 720px;
+    // }
   }
 
   @media (min-width: $sm-min) {
-    .container {
-      max-width: 960px;
-    }
+    // .container {
+    //   max-width: 960px;
+    // }
   }
 
   @media (min-width: $md-min) {
-    .container {
-      max-width: $container-width;
-    }
+    // .container {
+    //   max-width: $container-width;
+    // }
   }
 
   @include lg {
     // CSS responsive large desktop
+    // .content{
+    //   @include text(18px, ITREGULAR, 18px, $white-cl, none);
+    // }
   }
 
   @include md {
     // CSS responsive desktop
-    .content{
-      @include text(18px, ITREGULAR, 18px, $black-cl, none);
-    }
+    // .content{
+    //   @include text(18px, ITREGULAR, 18px, $white-cl, none);
+    // }
   }
 
   @include sm {
     // CSS responsive mobile
-    .content{
-      @include text(14px, ITREGULAR, 18px, $black-cl, none);
-    }
+    // .content{
+    //   @include text(14px, ITREGULAR, 18px, $black-cl, none);
+    // }
   }
 
   @include xs {

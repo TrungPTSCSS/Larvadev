@@ -1,6 +1,6 @@
 /*primary colors*/
 $white-cl: #fff;
-$black-cl: #000;
+$black-cl: #222;
 $white-heavy-cl: #d6d6d6;
 $black-heavy-cl: #2e2e2e;
 $loading-bg: #f3f5f7;
@@ -10,22 +10,25 @@ $text-cl: #222;
 $text-black-cl: #000;
 
 /*global bg color*/
-$main-bg-cl: #000;
+$main-bg-cl: #000314;
 $black-bg-cl: #000;
 
 //transition
 $t: 0.5s;
-$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+$cubic: cubic-bezier(0.65, 0, 0.35, 1);
+
+//radius
+$radius: 8px;
 
 /*font families*/
 $font-stack: "Open Sans", sans-serif;
 $font-main: arial;
 
 /*headings typo*/
-$fz-text: 20px;
+$fz-text: 16px;
 $lh-text: normal;
 
-$fz-text-m: 16px;
+$fz-text-m: 12px;
 $lh-text-m: normal;
 
 //============================================================//
@@ -33,7 +36,7 @@ $lh-text-m: normal;
 /*BOXED LAYOUT*/
 $container-max-width: 1920px;
 // tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
-$container-width: 1600px;
+$container-width: 1920px;
 
 /*GRID - media queries breakpoints*/
 $xxs-min: 576px; // CÓ THỂ TÙY CHỈNH

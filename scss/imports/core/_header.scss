@@ -1,3 +1,32 @@
 // css header
 header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: $t $cubic;
+  max-width: 1920px;
+  
+  .logo{
+      @include text(24px, ITBOLD, 18px, $white-cl, none);
+  }
+  &.overlay{
+    backdrop-filter: blur(5.8px);
+    background: rgba(0, 0, 0, 0.1);
+  }
+  &.hidden{
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.show{
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
 }

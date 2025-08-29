@@ -130,6 +130,7 @@
   line-height: $line-height;
   color: $color;
   text-transform: $text-transform;
+  letter-spacing: calc($font-size * (-4 / 100))
 }
 
 @mixin subTitle($left: true) {
