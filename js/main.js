@@ -3,6 +3,16 @@ $(document).ready(function () {
   let scrollTimeout;
   let lastScrollY = window.scrollY;
   const header = document.querySelector(".header");
+  const getStartedBtn = document.getElementById("get-started-btn");
+  
+  if (getStartedBtn) {
+    getStartedBtn.addEventListener("click", function () {
+      const contactSection = document.getElementById("Contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
 
   window.addEventListener("scroll", function () {
     const currentScrollY = window.scrollY;
