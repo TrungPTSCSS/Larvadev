@@ -45,6 +45,7 @@
     />
 
     <link rel="stylesheet" href="dest/style.min.css" />
+    <link rel="stylesheet" href="scss/customStyle.css" />
     <link rel="stylesheet" href="dest/fonts.css" />
   </head>
 
@@ -54,7 +55,7 @@
       <div class="nav">
         <ul>
           <li class="active">
-            <a href="#">Home</a>
+            <a href="#Home">Home</a>
           </li>
           <li>
             <a href="#AboutUs">About Us</a>
@@ -69,7 +70,8 @@
       </div>
     </header>
     <main class="main">
-      <section class="section_1 container">
+      <!-- HERO -->
+      <section id="Home" class="section_1 container">
         <img src="./assets/img/section1.jpg" alt="background" />
         <div class="information">
           <div
@@ -109,7 +111,7 @@
             data-aos-once="true"
             data-aos-anchor-placement="top"
           >
-            <button class="text-gradient">Get Started</button>
+            <button class="text-gradient" id="get-started-btn">Get Started</button>
           </div>
         </div>
         <div class="scroll_more">
@@ -188,7 +190,7 @@
         </div>
       </section>
       <!-- SERVICE -->
-      <section id="#Services" class="section_3 container">
+      <section id="Services" class="section_3 container">
         <div class="row services_content">
           <div class="offset-md-2 col-md-8">
             <div class="section_title title-text">Services</div>
@@ -258,7 +260,7 @@
                   PDF Training Guide
                 </li>
                 <li class="service_item-description--item small-text">
-                  One-month Post-launch Support
+                  1-month Post-launch Support
                 </li>
                 <li class="service_item-description--item small-text">
                   Free Setup (Hosting Avaiable With Discount)
@@ -329,7 +331,7 @@
                   PDF & Video Training Guide
                 </li>
                 <li class="service_item-description--item small-text">
-                  Two-month Post-launch Support
+                  2-month Post-launch Support
                 </li>
                 <li class="service_item-description--item small-text">
                   Free Setup (Hosting Avaiable With Discount)
@@ -400,7 +402,7 @@
                   Live Training Session + PDF & Video Training Guide
                 </li>
                 <li class="service_item-description--item small-text">
-                  Three-month Post-launch Support
+                  3-month Post-launch Support
                 </li>
                 <li class="service_item-description--item small-text">
                   Free Setup (Hosting Avaiable With Discount)
@@ -447,12 +449,12 @@
         </div>
       </section>
       <!-- CONTACT -->
-      <section id="#Contact" class="section_4 container">
+      <section id="Contact" class="section_4 container">
         <div class="row contact_content">
           <div class="col-md-6">
             <div class="section_title title-text">Contact Us</div>
             <div class="section_description normal-text">
-              Let’s chat! We offer free consultations — no pressure, just practical advice.
+              Let's chat! We offer free consultations — no pressure, just practical advice.
             </div>
           </div>
         </div>
@@ -544,39 +546,38 @@
     <footer>
       <div class="container-fluid centerFlexRow">
         <div class="row">
-          <div class="col-md-6">
+          <!-- Logo and copyright -->
+          <div class="col-md-4">
             <div class="logo">LarvaDev</div>
             <div class="logo_description text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Aspernatur magni cumque quae.
-              <br />Vel deserunt tempora adipisci, laudantium ullam et
-              praesentium laborum nobis dolor expedita nisi non molestias,
-              recusandae, totam quis.
+              Copyright © 2025 LarvaDev. All Rights Reserved.
             </div>
           </div>
-          <div class="offset-md-2"></div>
+          <!-- Sitemap -->
           <div class="col-md-4">
-            <div class="logo">Information</div>
-            <div class="logo_description text">LARVADEV@GMAIL.COM</div>
-            <div class="logo_description text">(780) 807-7788</div>
-            <div class="logo_description text">
-              Unit 306, metropolitan wharf, 70 wapping Wall, Canada
+            <div class="logo">Sitemap</div>
+            <div class="site-map">
+              <ul>
+                <li class="site-map-item text">
+                  <a href="#Home">Home</a>
+                </li>
+                <li class="site-map-item text">
+                  <a href="#AboutUs">About Us</a>
+                </li>
+                <li class="site-map-item text">
+                  <a href="#Services">Services</a>
+                </li>
+                <li class="site-map-item text">
+                  <a href="#Contact">Contact</a>
+                </li>
+              </ul>
             </div>
-            <div class="follow_us">
-              <div class="follow_us-icon">
-                <img src="./assets/icon/facebook.svg" alt="Facebook" />
-              </div>
-              <div class="follow_us-icon">
-                <img src="./assets/icon/instagram.svg" alt="Instagram" />
-              </div>
-              <div class="follow_us-icon">
-                <img src="./assets/icon/linkedin.svg" alt="LinkedIn" />
-              </div>
-            </div>
-            <!-- <div class="logo_description text">
-              Lorem ipsum dolor sit amet consectetur. Pretium velit porttitor
-              mauris risus pretium vehicula cras.
-            </div> -->
+          </div>
+          <!-- Get in touch -->
+          <div class="col-md-4">
+            <div class="logo">Get in Touch</div>
+            <div class="logo_description text">hi@larva.dev</div>
+            <div class="logo_description text">(780) 807 - 7788</div>
           </div>
         </div>
       </div>

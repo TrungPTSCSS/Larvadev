@@ -1,0 +1,8 @@
+.site-map-item a {
+    color: white;
+}
+
+footer .text {
+    text-transform: none;
+    font-size: 15px;
+}
