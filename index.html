@@ -267,7 +267,7 @@
                 </li>
               </ul>
               <div class="service_item-button button">
-                <button>Select Package</button>
+                <button id="starter-package-btn">Select Package</button>
               </div>
             </div>
           </div>
@@ -338,7 +338,7 @@
                 </li>
               </ul>
               <div class="service_item-button button">
-                <button>Select Package</button>
+                <button id="grow-package-btn">Select Package</button>
               </div>
             </div>
           </div>
@@ -409,7 +409,7 @@
                 </li>
               </ul>
               <div class="service_item-button button">
-                <button>Select Package</button>
+                <button id="scale-package-btn">Select Package</button>
               </div>
             </div>
           </div>
@@ -479,23 +479,26 @@
                     alt=""
                   />
                 </div>
-                <div class="col-md-4">
+                <!-- Form -->
+                <form id="contact-form" action="/submit" method="post" class="col-md-4">
+                  <!-- Name -->
                   <div class="row">
                     <div class="col-md-12">
                       <div class="contact_form-input">
                         <div class="contact_form-input--label">Name</div>
                         <div class="contact_form-input--input">
-                          <input type="text" id="name" />
+                          <input type="text" id="name" name="name" required/>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-- Phone + Email -->
                   <div class="row">
                     <div class="col-md-6">
                       <div class="contact_form-input">
                         <div class="contact_form-input--label">Phone</div>
                         <div class="contact_form-input--input">
-                          <input type="number" id="phone" />
+                          <input type="tel" id="phone" name="phone" required/>
                         </div>
                       </div>
                     </div>
@@ -503,7 +506,18 @@
                       <div class="contact_form-input">
                         <div class="contact_form-input--label">Email</div>
                         <div class="contact_form-input--input">
-                          <input type="email" id="email" />
+                          <input type="email" id="email" name="email" required/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Organization -->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="contact_form-input">
+                        <div class="contact_form-input--label">Organization</div>
+                        <div class="contact_form-input--input">
+                          <input type="text" id="organization" name="organization" required/>
                         </div>
                       </div>
                     </div>
@@ -511,31 +525,65 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="contact_form-input">
-                        <div class="contact_form-input--label">Address</div>
+                        <div class="contact_form-input--label">Website URL (if applicable)</div>
                         <div class="contact_form-input--input">
-                          <input type="email" id="dddress" />
+                          <input type="text" id="website" name="website" />
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-- Website Package -->
                   <div class="row">
                     <div class="col-md-12">
                       <div class="contact_form-input">
-                        <div class="contact_form-input--label">Content</div>
+                        <div class="contact_form-input--label">Website package you're interested in</div>
+                      </div>
+                      <div class="radio-buttons-group package-selection-radio">
+                        <input type="radio" id="starter" name="package-selection-radio" value="starter" checked>
+                        <label for="starter" class="radio-btn">Starter</label>
+                        <input type="radio" id="grow" name="package-selection-radio" value="grow">
+                        <label for="grow" class="radio-btn">Grow</label>
+                        <input type="radio" id="scale" name="package-selection-radio" value="scale">
+                        <label for="scale" class="radio-btn">Scale</label>
+                        <input type="radio" id="not-sure" name="package-selection-radio" value="not-sure">
+                        <label for="not-sure" class="radio-btn">Not Sure</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add-on options -->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="contact_form-input">
+                        <div class="contact_form-input--label">Add-ons you're interested in</div>
+                      </div>
+                      <div class="checkbox-buttons-group">
+                        <input type="checkbox" id="hosting" name="addons" value="hosting">
+                        <label for="hosting" class="checkbox-btn">Hosting & Maintenance</label>
+                        <input type="checkbox" id="design" name="addons" value="design">
+                        <label for="design" class="checkbox-btn">Graphic & Print Design</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Message -->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="contact_form-input">
+                        <div class="contact_form-input--label">Message</div>
                         <div class="contact_form-input--input">
-                          <textarea></textarea>
+                          <textarea id="message" name="message"></textarea>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-- Send -->
                   <div class="row">
                     <div class="col-md-12">
                       <div class="service_item-button button">
-                        <button>Send</button>
+                        <button id="submit-button" type="submit">Submit</button>
                       </div>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
               <span class="ball blue"></span>
             </div>

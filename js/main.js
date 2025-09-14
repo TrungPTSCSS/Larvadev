@@ -3,16 +3,9 @@ $(document).ready(function () {
   let scrollTimeout;
   let lastScrollY = window.scrollY;
   const header = document.querySelector(".header");
-  const getStartedBtn = document.getElementById("get-started-btn");
-  
-  if (getStartedBtn) {
-    getStartedBtn.addEventListener("click", function () {
-      const contactSection = document.getElementById("Contact");
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  }
+  getStartedButtonAction();
+  packageSelectionToContactForm();
+  getContactFormData();
 
   window.addEventListener("scroll", function () {
     const currentScrollY = window.scrollY;
@@ -170,3 +163,67 @@ $(document).ready(function () {
     observer.observe(section4);
   }
 });
+
+function getStartedButtonAction() {
+  const button = document.getElementById("get-started-btn");
+  if (button) {
+    button.addEventListener("click", () => scrollToContactForm()); 
+  }
+}
+
+function packageSelectionToContactForm() {
+  const starterPackageBtn = document.getElementById("starter-package-btn");
+  const growPackageBtn = document.getElementById("grow-package-btn");
+  const scalePackageBtn = document.getElementById("scale-package-btn");
+  const packageSelectionRadio = document.getElementsByName("package-selection-radio");
+
+  const setCheckedRadio = (radio) => {
+    packageSelectionRadio.forEach(r => r.checked = false);
+    if (!radio) return;
+    radio.checked = true;
+  }
+
+  if (starterPackageBtn) {
+    starterPackageBtn.addEventListener("click", function () {
+      const starterRadio = document.getElementById("starter");
+      setCheckedRadio(starterRadio);
+      scrollToContactForm();
+    });
+  }
+
+  if (growPackageBtn) {
+    growPackageBtn.addEventListener("click", function () {
+      const growRadio = document.getElementById("grow");
+      setCheckedRadio(growRadio);
+      scrollToContactForm();
+    });
+  }
+
+  if (scalePackageBtn) {
+    scalePackageBtn.addEventListener("click", function () {
+      const scaleRadio = document.getElementById("scale");
+      setCheckedRadio(scaleRadio);
+      scrollToContactForm();
+    });
+  }
+};
+
+function scrollToContactForm() {
+  const contactSection = document.getElementById("Contact");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+}
+
+function getContactFormData() {
+  document.querySelector('#contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    // Handle multi-select addons
+    data.addons = formData.getAll('addons');
+
+    return data;
+  });
+};

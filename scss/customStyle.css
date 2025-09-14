@@ -6,3 +6,32 @@ footer .text {
     text-transform: none;
     font-size: 15px;
 }
+
+.radio-buttons-group, .checkbox-buttons-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.radio-buttons-group input[type="radio"],
+.checkbox-buttons-group input[type="checkbox"] {
+    display: none;
+}
+.radio-buttons-group .radio-btn,
+.checkbox-buttons-group .checkbox-btn {
+    padding: 8px 20px;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    font-weight: 600;
+    user-select: none;
+}
+.radio-buttons-group input[type="radio"]:checked + .radio-btn,
+.checkbox-buttons-group input[type="checkbox"]:checked + .checkbox-btn {
+    background: #ff9f00;
+    color: #fff;
+}
+.radio-buttons-group .radio-btn:hover,
+.checkbox-buttons-group .checkbox-btn:hover {
+    background: #f3e6d1;
+}
