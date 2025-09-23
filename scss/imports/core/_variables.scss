@@ -25,18 +25,17 @@ $font-stack: "Open Sans", sans-serif;
 $font-main: arial;
 
 /*headings typo*/
-$fz-text: 16px;
+$fz-text: 1rem;
 $lh-text: normal;
 
-$fz-text-m: 12px;
+$fz-text-m: 0.75rem;
 $lh-text-m: normal;
 
 //============================================================//
 
 /*BOXED LAYOUT*/
 $container-max-width: 1920px;
-// tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
-$container-width: 1920px;
+$container-width: 1420px;
 
 /*GRID - media queries breakpoints*/
 $xxs-min: 576px; // CÓ THỂ TÙY CHỈNH

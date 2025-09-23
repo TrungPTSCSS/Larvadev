@@ -22,7 +22,7 @@ $(document).ready(function () {
           scrollTimeout = setTimeout(() => {
             header.classList.add("hidden");
             header.classList.remove("show");
-          }, 1000);
+          }, 1500);
         }
       } else if (scrollDelta < 0) {
         if (header.classList.contains("hidden")) {
@@ -38,7 +38,7 @@ $(document).ready(function () {
         }
         scrollTimeout = setTimeout(() => {
           header.classList.remove("overlay");
-        }, 500);
+        }, 1000);
       }
     } else {
       header.classList.remove("overlay", "show", "hidden");

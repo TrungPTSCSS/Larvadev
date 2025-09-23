@@ -39,4 +39,19 @@ footer {
       }
     }
   }
+
+  .text {
+    @include text(0.8rem, ITREGULAR, 0.8rem, $white-cl, none);
+  }
+
+  .site-map-item {
+    margin-bottom: 6px;
+    a {
+      color: white;
+    }
+  }
+
+  .logo_description {
+    margin-bottom: 6px;
+  }
 }

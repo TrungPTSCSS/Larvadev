@@ -11,7 +11,7 @@
     cursor: pointer;
     a {
       height: fit-content;
-      @include text(16px, ITBOLD, 16px, $white-cl, none);
+      @include text(1rem, ITBOLD, 1rem, $white-cl, none);
       transition: $t;
       opacity: 0.4;
     }
