@@ -33,14 +33,16 @@ body {
   @include customscroll();
 
   .container {
-    width: 100%;
-    padding: 0 60px;
+    width: $container-width;
+    padding: 0 15px;
     margin-right: auto;
     margin-left: auto;
   }
 
   .container-fluid {
-    padding: 0 60px;
+    width: $container-width;
+    padding: 0 15px;
+    margin: 0 auto;
 
     @include xs {
       padding-right: 15px;
@@ -58,7 +60,7 @@ body {
     margin-left: -15px;
   }
 
-  .relative{
+  .relative {
     position: relative;
   }
 
@@ -67,63 +69,57 @@ body {
     margin-left: 0;
   }
 
+  .w-50 {
+    width: 50% !important;
+  }
+
+  .gap-15 {
+    gap: 15px;
+  }
+  
+
   .no-gap>.col,
   .no-gap>[class*="col-"] {
     padding-right: 0;
     padding-left: 0;
   }
 
-  @media (min-width: $xxs-min) {
-    // .container {
-    //   max-width: 540px;
-    // }
-  }
+  @media (min-width: $xxs-min) {}
 
-  @media (min-width: $xs-min) {
-    // .container {
-    //   max-width: 720px;
-    // }
-  }
+  @media (min-width: $xs-min) {}
 
-  @media (min-width: $sm-min) {
-    // .container {
-    //   max-width: 960px;
-    // }
-  }
+  @media (min-width: $sm-min) {}
 
-  @media (min-width: $md-min) {
-    // .container {
-    //   max-width: $container-width;
-    // }
-  }
+  @media (min-width: $md-min) {}
 
   @include lg {
     // CSS responsive large desktop
-    // .content{
-    //   @include text(18px, ITREGULAR, 18px, $white-cl, none);
-    // }
+    font-size: 16px;
+
   }
 
   @include md {
     // CSS responsive desktop
-    // .content{
-    //   @include text(18px, ITREGULAR, 18px, $white-cl, none);
-    // }
+    font-size: 16px;
+
   }
 
   @include sm {
     // CSS responsive mobile
-    // .content{
-    //   @include text(14px, ITREGULAR, 18px, $black-cl, none);
-    // }
+    font-size: 12px;
+
   }
 
   @include xs {
     // CSS responsive mobile
+    font-size: 12px;
+
   }
 
   @include xxs {
     // CSS responsive small mobile
+    font-size: 12px;
+
   }
 
   @media (max-width: 500px) {}

@@ -49,27 +49,30 @@
   </head>
 
   <body>
-    <header class="container-fluid header">
-      <div class="logo">LarvaDev</div>
-      <div class="nav">
-        <ul>
-          <li class="active">
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#AboutUs">About Us</a>
-          </li>
-          <li>
-            <a href="#Services">Services</a>
-          </li>
-          <li>
-            <a href="#Contact">Contact</a>
-          </li>
-        </ul>
+    <header class="header">
+      <div class="container-fluid">
+        <div class="logo">LarvaDev</div>
+        <div class="nav">
+          <ul>
+            <li class="active">
+              <a href="#Home">Home</a>
+            </li>
+            <li>
+              <a href="#AboutUs">About Us</a>
+            </li>
+            <li>
+              <a href="#Services">Services</a>
+            </li>
+            <li>
+              <a href="#Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main class="main">
-      <section class="section_1 container">
+      <!-- HERO -->
+      <section id="Home" class="section_1 container">
         <img src="./assets/img/section1.jpg" alt="background" />
         <div class="information">
           <div
@@ -83,7 +86,7 @@
             data-aos-once="true"
             data-aos-anchor-placement="top"
           >
-            Software solution
+            BOOST YOUR BUSINESS
           </div>
           <div
             class="information_content normal-text"
@@ -96,10 +99,10 @@
             data-aos-once="true"
             data-aos-anchor-placement="top"
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />In
-            nullam leo ullamcorper leo vulputate enim leo auctor enim.
-            <br />Pretium etiam nullam viverra quam venenatis imperdiet at id
-            dictumst.
+            We deliver affordable, modern websites tailored for small Canadian
+            businesses.<br />
+            Our personalized support and innovative designs propel your brand
+            for takeoff.
           </div>
           <div
             class="information_button button"
@@ -111,12 +114,15 @@
             data-aos-once="true"
             data-aos-anchor-placement="top"
           >
-            <button class="text-gradient">Contact to unlock your idea</button>
+            <button class="text-gradient" id="get-started-btn">
+              Get Started
+            </button>
           </div>
         </div>
         <div class="scroll_more">
-          <div class="scroll_more-wrapper"
-            data-aos="fade-down"
+          <div
+            class="scroll_more-wrapper"
+            data-aos="fade-up"
             data-aos-offset="100"
             data-aos-duration="800"
             data-aos-delay="2900"
@@ -135,21 +141,35 @@
           </div>
         </div>
       </section>
+      <!-- ABOUT US -->
       <section id="AboutUs" class="section_2 container">
-        <div class="row relative-3">
-          <div class="col-md-6">
+        <div class="row flex relative-3">
+          <div class="col-md-6 flexColumn relative">
             <div class="section_title title-text">About Us</div>
-            <div class="section_description normal-text">
-              Volutpat pretium scelerisque nisi diam vel. Ultrices ultricies
-              quam semper orci posuere in pulvinar et etiam. Dolor ornare
-              tincidunt dictum elementum varius consequat fermentum ac sit.
-              Velit pulvinar volutpat aliquet nibh diam elementum nam nisl.
-              Habitasse tincidunt adipiscing auctor odio. Sagittis viverra
-              auctor sed id risus tortor magnis.
-            </div>
+            <p class="normal-text section_description">
+              We are a dedicated website development team formed by three
+              friends while working as software engineers. With a combined
+              experience in website development, design, and digital marketing,
+              we have come together to empower small Canadian businesses in
+              navigating the online landscape.
+            </p>
+            <p class="normal-text section_description">
+              At LarvaDev, our mission is simple: to provide small businesses
+              with an affordable website that boosts their online presence. We
+              recognize that each business is unique, and we're here to guide
+              you, whether you're just starting or looking to enhance your
+              existing website.
+            </p>
+            <p class="normal-text section_description">
+              We offer competitive services without compromising quality by
+              operating remotely to reduce overhead costs and passing savings on
+              to you. Our skilled in-house team handles all development, design,
+              and support, ensuring consistency and quality. Committed to high
+              standards, we stay updated on the latest trends and technologies,
+              ensuring your site is functional, modern, user-friendly, and
+              optimized for search engines.
+            </p>
           </div>
-        </div>
-        <div class="row flex align_center relative">
           <div class="col-md-6 relative">
             <div
               class="about_us-img"
@@ -162,59 +182,19 @@
               data-aos-once="true"
               data-aos-anchor-placement="top"
             >
-              <img src="./assets/img/about_us.jpg" alt="About Us" />
+              <img src="./assets/img/about_us.gif" alt="About Us" />
             </div>
           </div>
-          <div class="col-md-6 flexColumn align_center relative">
-            <p class="normal-text mb-20 section_description">
-              Volutpat pretium scelerisque nisi diam vel. Ultrices ultricies
-              quam semper orci posuere in pulvinar et etiam. Dolor ornare
-              tincidunt dictum elementum varius consequat fermentum ac sit.
-              Velit pulvinar volutpat aliquet nibh diam elementum nam nisl.
-              Habitasse tincidunt adipiscing auctor odio. Sagittis viverra
-              auctor sed id risus tortor magnis.
-            </p>
-            <p class="normal-text mb-20 section_description">
-              Volutpat pretium scelerisque nisi diam vel. Ultrices ultricies
-              quam semper orci posuere in pulvinar et etiam. Dolor ornare
-              tincidunt dictum elementum varius consequat fermentum ac sit.
-              Velit pulvinar volutpat aliquet nibh diam elementum nam nisl.
-              Habitasse tincidunt adipiscing auctor odio. Sagittis viverra
-              auctor sed id risus tortor magnis.
-            </p>
-            <p class="normal-text section_description">
-              Volutpat pretium scelerisque nisi diam vel. Ultrices ultricies
-              quam semper orci posuere in pulvinar et etiam. Dolor ornare
-              tincidunt dictum elementum varius consequat fermentum ac sit.
-              Velit pulvinar volutpat aliquet nibh diam elementum nam nisl.
-              Habitasse tincidunt adipiscing auctor odio. Sagittis viverra
-              auctor sed id risus tortor magnis.
-            </p>
-          </div>
-          <span
-            class="ball purple"
-            data-aos="fade-up"
-            data-aos-offset="100"
-            data-aos-delay="1000"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out-sine"
-            data-aos-mirror="false"
-            data-aos-once="true"
-            data-aos-anchor-placement="top"
-          ></span>
         </div>
       </section>
-      <section id="#Services" class="section_3 container">
+      <!-- SERVICE -->
+      <section id="Services" class="section_3 container">
         <div class="row services_content">
           <div class="offset-md-2 col-md-8">
             <div class="section_title title-text">Services</div>
             <div class="section_description normal-text">
-              Volutpat pretium scelerisque nisi diam vel. Ultrices ultricies
-              quam semper orci posuere in pulvinar et etiam. Dolor ornare
-              tincidunt dictum elementum varius consequat fermentum ac sit.
-              Velit pulvinar volutpat aliquet nibh diam elementum nam nisl.
-              Habitasse tincidunt adipiscing auctor odio. Sagittis viverra
-              auctor sed id risus tortor magnis.
+              Whether you're just starting out or ready to grow, we've got a
+              package that fits your needs and budget.
             </div>
           </div>
         </div>
@@ -234,30 +214,60 @@
               <div class="service_item-price">From $295</div>
               <div class="service_item-info">
                 <div class="service_item-info--title">Starter</div>
-                <div class="service_item-info--content small-text">
+                <div class="service_item-info--content">
                   Ideal for freelancers and local shops needing a simple,
                   one-page site to get online fast.
                 </div>
               </div>
               <ul class="service_item-description">
                 <li class="service_item-description--item small-text">
-                  Design 1 site
+                  1 Page
                 </li>
                 <li class="service_item-description--item small-text">
-                  Develop 1 site
+                  Template-based, branded
                 </li>
                 <li class="service_item-description--item small-text">
-                  Upgrade
+                  1x Round of Revision
                 </li>
                 <li class="service_item-description--item small-text">
-                  Maintenance
+                  Basic Responsive Support
                 </li>
                 <li class="service_item-description--item small-text">
-                  Deploy
+                  Basic Contact Form
+                </li>
+                <li class="service_item-description--item small-text">
+                  Basic Social Media Integration (Links, Buttons)
+                </li>
+                <li class="service_item-description--item small-text">
+                  Blog Add-on Available (+$45)
+                </li>
+                <li class="service_item-description--item small-text">
+                  No CMS
+                </li>
+                <li class="service_item-description--item small-text">
+                  Basic SEO
+                </li>
+                <li class="service_item-description--item small-text">
+                  Free SSL Certificate
+                </li>
+                <li class="service_item-description--item small-text">
+                  Basic Speed Tuning
+                </li>
+                <li class="service_item-description--item small-text">
+                  No Google Analytics
+                </li>
+                <li class="service_item-description--item small-text">
+                  PDF Training Guide
+                </li>
+                <li class="service_item-description--item small-text">
+                  1-month Post-launch Support
+                </li>
+                <li class="service_item-description--item small-text">
+                  Free Setup (Hosting Avaiable With Discount)
                 </li>
               </ul>
               <div class="service_item-button button">
-                <button>Start Now</button>
+                <button id="starter-package-btn">Select Package</button>
               </div>
             </div>
           </div>
@@ -276,30 +286,60 @@
               <div class="service_item-price">From $595</div>
               <div class="service_item-info">
                 <div class="service_item-info--title">Grow</div>
-                <div class="service_item-info--content small-text">
-                  Ideal for freelancers and local shops needing a simple,
-                  one-page site to get online fast.
+                <div class="service_item-info--content">
+                  Perfect for growing businesses needing a custom multi-page
+                  website with forms and SEO.
                 </div>
               </div>
               <ul class="service_item-description">
                 <li class="service_item-description--item small-text">
-                  Design 1 site
+                  1-5 Pages
                 </li>
                 <li class="service_item-description--item small-text">
-                  Develop 1 site
+                  Custom Design
                 </li>
                 <li class="service_item-description--item small-text">
-                  Upgrade
+                  3x Round of Revisions
                 </li>
                 <li class="service_item-description--item small-text">
-                  Maintenance
+                  Fully Responsive (Mobile, Tablet, Desktop)
                 </li>
                 <li class="service_item-description--item small-text">
-                  Deploy
+                  Booking/Contact Form
+                </li>
+                <li class="service_item-description--item small-text">
+                  Advanced Social Media Integration (Feeds, Messaging)
+                </li>
+                <li class="service_item-description--item small-text">
+                  Blog Included
+                </li>
+                <li class="service_item-description--item small-text">
+                  WordPress CMS
+                </li>
+                <li class="service_item-description--item small-text">
+                  On-page SEO
+                </li>
+                <li class="service_item-description--item small-text">
+                  Free SSL Certificate
+                </li>
+                <li class="service_item-description--item small-text">
+                  Mobile & Image optimization
+                </li>
+                <li class="service_item-description--item small-text">
+                  Google Analytics Included
+                </li>
+                <li class="service_item-description--item small-text">
+                  PDF & Video Training Guide
+                </li>
+                <li class="service_item-description--item small-text">
+                  2-month Post-launch Support
+                </li>
+                <li class="service_item-description--item small-text">
+                  Free Setup (Hosting Avaiable With Discount)
                 </li>
               </ul>
               <div class="service_item-button button">
-                <button>Start Now</button>
+                <button id="grow-package-btn">Select Package</button>
               </div>
             </div>
           </div>
@@ -315,33 +355,63 @@
             data-aos-anchor-placement="top"
           >
             <div class="service_item">
-              <div class="service_item-price">From $995</div>
+              <div class="service_item-price">From $1195</div>
               <div class="service_item-info">
-                <div class="service_item-info--title">Scales</div>
-                <div class="service_item-info--content small-text">
-                  Ideal for freelancers and local shops needing a simple,
-                  one-page site to get online fast.
+                <div class="service_item-info--title">Scale</div>
+                <div class="service_item-info--content">
+                  Built for scaling brands that need eCommerce, blogs, and other
+                  advanced features.
                 </div>
               </div>
               <ul class="service_item-description">
                 <li class="service_item-description--item small-text">
-                  Design 1 site
+                  Unlimited Pages
                 </li>
                 <li class="service_item-description--item small-text">
-                  Develop 1 site
+                  Premium & Fully Tailored Design
                 </li>
                 <li class="service_item-description--item small-text">
-                  Upgrade
+                  4x Round of Revisions
                 </li>
                 <li class="service_item-description--item small-text">
-                  Maintenance
+                  Fully Responsive (Mobile, Tablet, Desktop)
                 </li>
                 <li class="service_item-description--item small-text">
-                  Deploy
+                  Advanced Custom Forms (Quotes, Bookings, Payments)
+                </li>
+                <li class="service_item-description--item small-text">
+                  Advanced Social Media Integration (Feeds, Messaging)
+                </li>
+                <li class="service_item-description--item small-text">
+                  Blog Included
+                </li>
+                <li class="service_item-description--item small-text">
+                  WordPress/Custom CMS
+                </li>
+                <li class="service_item-description--item small-text">
+                  Full SEO Setup (On-page + Performance Tuning)
+                </li>
+                <li class="service_item-description--item small-text">
+                  Free SSL Certificate
+                </li>
+                <li class="service_item-description--item small-text">
+                  Advanced Speed, Image & Caching Optimization
+                </li>
+                <li class="service_item-description--item small-text">
+                  Google Analytics Included
+                </li>
+                <li class="service_item-description--item small-text">
+                  Live Training Session + PDF & Video Training Guide
+                </li>
+                <li class="service_item-description--item small-text">
+                  3-month Post-launch Support
+                </li>
+                <li class="service_item-description--item small-text">
+                  Free Setup (Hosting Avaiable With Discount)
                 </li>
               </ul>
               <div class="service_item-button button">
-                <button>Start Now</button>
+                <button id="scale-package-btn">Select Package</button>
               </div>
             </div>
           </div>
@@ -380,14 +450,14 @@
           ></span>
         </div>
       </section>
-      <section id="#Contact" class="section_4 container">
+      <!-- CONTACT -->
+      <section id="Contact" class="section_4 container">
         <div class="row contact_content">
           <div class="col-md-6">
-            <div class="section_title title-text">Contact</div>
+            <div class="section_title title-text">Contact Us</div>
             <div class="section_description normal-text">
-              Volutpat pretium scelerisque nisi diam vel. Ultrices ultricies
-              quam semper orci posuere in pulvinar et etiam. Dolor ornare
-              tincidunt dictum elementum varius consequat
+              Let's chat! We offer free consultations — no pressure, just
+              practical advice.
             </div>
           </div>
         </div>
@@ -404,39 +474,80 @@
               data-aos-once="true"
               data-aos-anchor-placement="top"
             >
-              <div class="row">
-                <div class="col-md-8">
-                  <img
-                    class="contact_form-img"
-                    src="./assets/img/contact.jpg"
-                    alt=""
-                  />
+              <div class="flex">
+                <div class="contact_form-img">
+                  <img src="./assets/img/contact.jpg" alt="" />
                 </div>
-                <div class="col-md-4">
+                <!-- Form -->
+                <form
+                  action="/submit"
+                  method="post"
+                  id="contact-form"
+                  class="form"
+                >
+                  <!-- Name -->
                   <div class="row">
                     <div class="col-md-12">
                       <div class="contact_form-input">
                         <div class="contact_form-input--label">Name</div>
                         <div class="contact_form-input--input">
-                          <input type="text" id="name" />
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            placeholder="Enter your name"
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-6">
+                  <!-- Phone + Email -->
+                  <div class="flex gap-15">
+                    <div class="w-50">
                       <div class="contact_form-input">
                         <div class="contact_form-input--label">Phone</div>
                         <div class="contact_form-input--input">
-                          <input type="number" id="phone" />
+                          <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            required
+                            placeholder="Enter your phone number"
+                          />
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="w-50">
                       <div class="contact_form-input">
                         <div class="contact_form-input--label">Email</div>
                         <div class="contact_form-input--input">
-                          <input type="email" id="email" />
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="Enter your email"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Organization -->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="contact_form-input">
+                        <div class="contact_form-input--label">
+                          Organization
+                        </div>
+                        <div class="contact_form-input--input">
+                          <input
+                            type="text"
+                            id="organization"
+                            name="organization"
+                            required
+                            placeholder="Enter your organization name"
+                          />
                         </div>
                       </div>
                     </div>
@@ -444,31 +555,133 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="contact_form-input">
-                        <div class="contact_form-input--label">Address</div>
+                        <div class="contact_form-input--label">
+                          Website URL (if applicable)
+                        </div>
                         <div class="contact_form-input--input">
-                          <input type="email" id="dddress" />
+                          <input
+                            type="text"
+                            id="website"
+                            name="website"
+                            placeholder="Enter your website URL"
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-- Website Package -->
                   <div class="row">
                     <div class="col-md-12">
                       <div class="contact_form-input">
-                        <div class="contact_form-input--label">Content</div>
-                        <div class="contact_form-input--input">
-                          <textarea></textarea>
+                        <div class="contact_form-input--label">
+                          Website package you're interested in
+                        </div>
+                        <div
+                          class="radio-buttons-group package-selection-radio flex"
+                        >
+                          <div class="package-option">
+                            <input
+                              type="radio"
+                              id="starter"
+                              name="package-selection-radio"
+                              value="starter"
+                              checked
+                            />
+                            <label for="starter" class="radio-btn"
+                              >Starter</label
+                            >
+                          </div>
+                          <div class="package-option">
+                            <input
+                              type="radio"
+                              id="grow"
+                              name="package-selection-radio"
+                              value="grow"
+                            />
+                            <label for="grow" class="radio-btn">Grow</label>
+                          </div>
+                          <div class="package-option">
+                            <input
+                              type="radio"
+                              id="scale"
+                              name="package-selection-radio"
+                              value="scale"
+                            />
+                            <label for="scale" class="radio-btn">Scale</label>
+                          </div>
+                          <div class="package-option">
+                            <input
+                              type="radio"
+                              id="not-sure"
+                              name="package-selection-radio"
+                              value="not-sure"
+                            />
+                            <label for="not-sure" class="radio-btn"
+                              >Not Sure</label
+                            >
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-- Add-on options -->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="contact_form-input">
+                        <div class="contact_form-input--label">
+                          Add-ons you're interested in
+                        </div>
+                        <div class="checkbox-buttons-group flex">
+                          <div class="checkbox-buttons-option">
+                            <input
+                              type="checkbox"
+                              id="hosting"
+                              name="addons"
+                              value="hosting"
+                            />
+                            <label for="hosting" class="checkbox-btn"
+                              >Hosting & Maintenance</label
+                            >
+                          </div>
+                          <div class="checkbox-buttons-option">
+                            <input
+                              type="checkbox"
+                              id="design"
+                              name="addons"
+                              value="design"
+                            />
+                            <label for="design" class="checkbox-btn"
+                              >Graphic & Print Design</label
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Message -->
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="contact_form-input">
+                        <div class="contact_form-input--label">Message</div>
+                        <div class="contact_form-input--input">
+                          <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Enter your message"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Send -->
                   <div class="row">
                     <div class="col-md-12">
                       <div class="service_item-button button">
-                        <button>Send</button>
+                        <button id="submit-button" type="submit">Submit</button>
                       </div>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
               <span class="ball blue"></span>
             </div>
@@ -479,39 +692,38 @@
     <footer>
       <div class="container-fluid centerFlexRow">
         <div class="row">
-          <div class="col-md-6">
+          <!-- Logo and copyright -->
+          <div class="col-md-4">
             <div class="logo">LarvaDev</div>
             <div class="logo_description text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Aspernatur magni cumque quae.
-              <br />Vel deserunt tempora adipisci, laudantium ullam et
-              praesentium laborum nobis dolor expedita nisi non molestias,
-              recusandae, totam quis.
+              Copyright © 2025 LarvaDev. All Rights Reserved.
             </div>
           </div>
-          <div class="offset-md-2"></div>
+          <!-- Sitemap -->
           <div class="col-md-4">
-            <div class="logo">Information</div>
-            <div class="logo_description text">LARVADEV@GMAIL.COM</div>
-            <div class="logo_description text">(780) 807-7788</div>
-            <div class="logo_description text">
-              Unit 306, metropolitan wharf, 70 wapping Wall, Canada
+            <div class="logo">Sitemap</div>
+            <div class="site-map">
+              <ul>
+                <li class="site-map-item text">
+                  <a href="#Home">Home</a>
+                </li>
+                <li class="site-map-item text">
+                  <a href="#AboutUs">About Us</a>
+                </li>
+                <li class="site-map-item text">
+                  <a href="#Services">Services</a>
+                </li>
+                <li class="site-map-item text">
+                  <a href="#Contact">Contact</a>
+                </li>
+              </ul>
             </div>
-            <div class="follow_us">
-              <div class="follow_us-icon">
-                <img src="./assets/icon/facebook.svg" alt="Facebook" />
-              </div>
-              <div class="follow_us-icon">
-                <img src="./assets/icon/instagram.svg" alt="Instagram" />
-              </div>
-              <div class="follow_us-icon">
-                <img src="./assets/icon/linkedin.svg" alt="LinkedIn" />
-              </div>
-            </div>
-            <!-- <div class="logo_description text">
-              Lorem ipsum dolor sit amet consectetur. Pretium velit porttitor
-              mauris risus pretium vehicula cras.
-            </div> -->
+          </div>
+          <!-- Get in touch -->
+          <div class="col-md-4">
+            <div class="logo">Get in Touch</div>
+            <div class="logo_description text">hi@larva.dev</div>
+            <div class="logo_description text">(780) 807 - 7788</div>
           </div>
         </div>
       </div>

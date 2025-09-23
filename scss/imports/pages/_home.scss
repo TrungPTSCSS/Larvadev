@@ -1,9 +1,10 @@
 body {
   .main {
     background-color: $main-bg-cl;
-    overflow-x: hidden;
+    overflow: hidden;
 
     .section_1 {
+      width: 100vw;
       position: relative;
       overflow: hidden;
 
@@ -26,10 +27,8 @@ body {
 
         &_title {
           letter-spacing: normal;
-
           &.splitting {
             opacity: 1;
-
             .char {
               animation: slide-in 0.8s cubic-bezier(.5, 0, .5, 1) both;
               animation-delay: min(calc(50ms * var(--char-index)), 1s);
@@ -39,7 +38,7 @@ body {
 
         &_content {
           max-width: 80%;
-          margin: 18px auto 40px;
+          // margin: 18px auto 40px;
           line-height: 20px;
         }
       }
@@ -47,23 +46,26 @@ body {
       .scroll_more {
         position: absolute;
         bottom: 114px;
-        right: -14px;
         z-index: 2;
-        transform: rotate(90deg);
+        left: 50%;
+        transform: translateX(-50%);
+        // transform: rotate(90deg);
 
         &-wrapper {
           display: flex;
           align-items: center;
+          flex-direction: column
         }
 
         &-text {
-          @include text(16px, ITREGULAR, 16px, $white-cl, none);
-          margin-right: 20px;
+          @include text(1rem, ITREGULAR, 1rem, $white-cl, none);
         }
 
         &-icon {
           display: flex;
           align-items: center;
+          transform: rotate(90deg);
+          margin-top: 34px;
 
           span {
             display: block;
@@ -103,11 +105,13 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-top: 60px;
 
       .section {
         &_description {
-          margin-bottom: 46px;
+          margin-bottom: 24px;
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
         }
       }
 
@@ -121,7 +125,7 @@ body {
       }
 
       .about_us-img {
-        height: 500px;
+        height: 100%;
         position: relative;
         overflow: hidden;
         border-radius: $radius;
@@ -139,15 +143,6 @@ body {
         border-radius: 100%;
         filter: blur(60px);
         z-index: 1;
-
-        &.purple {
-          top: -100px;
-          left: 0;
-          transform: translateX(-40%);
-          background: radial-gradient(circle,
-              #BB15B6 100%,
-              rgba(0, 5, 3, 0) 0%);
-        }
       }
     }
 
@@ -157,17 +152,13 @@ body {
       justify-content: center;
 
       .services_content {
-        margin-bottom: 46px;
+        margin-bottom: 12px;
         position: relative;
         z-index: 2;
       }
 
       .section {
-        &_title {
-          text-align: center;
-        }
-
-        &_description {
+        &_title, &_description {
           text-align: center;
         }
       }
@@ -246,40 +237,6 @@ body {
 
     .splitting {
       overflow: hidden;
-    }
-
-    .section {
-      &_title {
-        margin-bottom: 18px;
-        opacity: 0;
-
-        &.splitting {
-          opacity: 1;
-
-          .char {
-            animation: slide-in 0.8s cubic-bezier(.5, 0, .5, 1) both;
-            animation-delay: min(calc(50ms * var(--char-index)), 1s);
-          }
-        }
-      }
-
-      &_description {
-        margin-bottom: 30px;
-        opacity: 0;
-
-        &.splitting {
-          opacity: 1;
-
-          .word {
-            overflow: hidden;
-          }
-
-          .char {
-            animation: slide-in_section2 .6s cubic-bezier(.5, 0, .5, 1) both;
-            animation-delay: calc(3ms * var(--char-index) + 500ms);
-          }
-        }
-      }
     }
   }
 }
