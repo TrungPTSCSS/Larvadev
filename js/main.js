@@ -5,7 +5,6 @@ $(document).ready(function () {
   const header = document.querySelector(".header");
   getStartedButtonAction();
   packageSelectionToContactForm();
-  getContactFormData();
 
   window.addEventListener("scroll", function () {
     const currentScrollY = window.scrollY;
@@ -44,6 +43,16 @@ $(document).ready(function () {
       header.classList.remove("overlay", "show", "hidden");
     }
 
+    // if (currentScrollY < innerHeight) {
+    //   setActiveNav("home");
+    // } else if (currentScrollY >= document.querySelector("#AboutUs").offsetTop && currentScrollY < innerHeight * 2) {
+    //   setActiveNav("aboutus");
+    // } else if (currentScrollY >= document.querySelector("#Services").offsetTop && currentScrollY < innerHeight * 3) {
+    //   setActiveNav("services");
+    // } else if (currentScrollY >= innerHeight * 3) {
+    //   setActiveNav("contact");
+    // }
+
     lastScrollY = currentScrollY;
   });
 
@@ -61,16 +70,11 @@ $(document).ready(function () {
 
   //section 1
   const titleSection1 = document.querySelector(".section_1 .information_title");
-
   if (titleSection1) {
-    console.log("section 1");
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("====================================");
-            console.log("section 1");
-            console.log("====================================");
             Splitting({ target: titleSection1, by: "chars" });
             observer.unobserve(entry.target);
           }
@@ -85,9 +89,6 @@ $(document).ready(function () {
   //section 2
   const section2 = document.querySelector(".section_2");
   const sectionTitle2 = document.querySelectorAll(".section_2 .section_title");
-  console.log('====================================');
-  console.log(sectionTitle2);
-  console.log('====================================');
   const sectionDescription2 = document.querySelectorAll(
     ".section_2 .section_description"
   );
@@ -162,12 +163,89 @@ $(document).ready(function () {
 
     observer.observe(section4);
   }
+
+  const listNav = document.querySelectorAll(".nav ul li");
+  listNav.forEach((nav) => {
+    nav.addEventListener("click", function (e) {
+      e.preventDefault();
+      const idActive = this.getAttribute("id");
+      setActiveNav(idActive);
+      $(`section#${idActive}`)[0].scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+
+  const navMobile = document.querySelector(".nav_mobile");
+  const listNavMobile = document.querySelectorAll(".nav_mobile-list li");
+  listNavMobile?.forEach((nav) => {
+    nav.addEventListener("click", function (e) {
+      e.preventDefault();
+      const idActive = this.getAttribute("id");
+      console.log(idActive);
+      addScrolling();
+      setActiveNavMobile(idActive);
+      $(".nav_mobile-list").removeClass("active");
+      navMobile.classList.remove("active");
+      $(`section#${idActive}`)[0].scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+  navMobile.addEventListener("click", function () {
+    const navList = document.querySelector(".nav_mobile-list");
+    navList.classList.toggle("active");
+    navMobile.classList.toggle("active");
+    if (navList.classList.contains("active")) {
+      removeScrolling();
+    } else {
+      addScrolling();
+    }
+  });
+  $(document).keyup(function (e) {
+    if (e.key === "Escape") {
+      $(".nav_mobile-list").removeClass("active");
+      addScrolling();
+    }
+  });
+
+  $("submit-button").click(() => {
+    getContactFormData();
+  });
 });
 
+function removeScrolling() {
+  document.body.style.overflow = "hidden";
+}
+
+function addScrolling() {
+  document.body.style.overflow = "auto";
+}
+
+function setActiveNav(idActive) {
+  $(".nav #" + idActive).addClass("active");
+  $(".nav li")
+    .not("#" + idActive)
+    .removeClass("active");
+}
+
+function setActiveNavMobile(idActive) {
+  $(".nav_mobile-list #" + idActive).addClass("active");
+  $(".nav_mobile-list li")
+    .not("#" + idActive)
+    .removeClass("active");
+}
+
 function getStartedButtonAction() {
+  console.log("getStartedButtonAction");
   const button = document.getElementById("get-started-btn");
+  console.log("button", button);
   if (button) {
-    button.addEventListener("click", () => scrollToContactForm()); 
+    button.addEventListener("click", () => {
+      console.log("click");
+
+      scrollToContactForm();
+    });
   }
 }
 
@@ -175,13 +253,15 @@ function packageSelectionToContactForm() {
   const starterPackageBtn = document.getElementById("starter-package-btn");
   const growPackageBtn = document.getElementById("grow-package-btn");
   const scalePackageBtn = document.getElementById("scale-package-btn");
-  const packageSelectionRadio = document.getElementsByName("package-selection-radio");
+  const packageSelectionRadio = document.getElementsByName(
+    "package-selection-radio"
+  );
 
   const setCheckedRadio = (radio) => {
-    packageSelectionRadio.forEach(r => r.checked = false);
+    packageSelectionRadio.forEach((r) => (r.checked = false));
     if (!radio) return;
     radio.checked = true;
-  }
+  };
 
   if (starterPackageBtn) {
     starterPackageBtn.addEventListener("click", function () {
@@ -206,24 +286,24 @@ function packageSelectionToContactForm() {
       scrollToContactForm();
     });
   }
-};
+}
 
 function scrollToContactForm() {
-  const contactSection = document.getElementById("Contact");
-  if (contactSection) {
-    contactSection.scrollIntoView({ behavior: "smooth" });
-  }
+  const contactSection = document.querySelector("section#Contact");
+  contactSection && contactSection.scrollIntoView({ behavior: "smooth" });
 }
 
 function getContactFormData() {
-  document.querySelector('#contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const formData = new FormData(this);
-    const data = Object.fromEntries(formData.entries());
+  document
+    .querySelector("#contact-form")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+      const formData = new FormData(this);
+      const data = Object.fromEntries(formData.entries());
 
-    // Handle multi-select addons
-    data.addons = formData.getAll('addons');
+      // Handle multi-select addons
+      data.addons = formData.getAll("addons");
 
-    return data;
-  });
-};
+      return data;
+    });
+}

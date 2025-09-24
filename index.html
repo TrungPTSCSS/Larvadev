@@ -54,19 +54,26 @@
         <div class="logo">LarvaDev</div>
         <div class="nav">
           <ul>
-            <li class="active">
+            <li id="Home" class="active">
               <a href="#Home">Home</a>
             </li>
-            <li>
+            <li id="AboutUs">
               <a href="#AboutUs">About Us</a>
             </li>
-            <li>
+            <li id="Services">
               <a href="#Services">Services</a>
             </li>
-            <li>
+            <li id="Contact">
               <a href="#Contact">Contact</a>
             </li>
           </ul>
+        </div>
+        <div class="nav_mobile">
+          <div class="hamburger flexColumn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </header>
@@ -78,7 +85,7 @@
           <div
             class="information_title large-text"
             data-aos="fade-up"
-            data-aos-offset="100"
+            data-aos-offset="0"
             data-aos-delay="100"
             data-aos-duration="200"
             data-aos-easing="ease-in-out-sine"
@@ -91,7 +98,7 @@
           <div
             class="information_content normal-text"
             data-aos="fade-up"
-            data-aos-offset="200"
+            data-aos-offset="0"
             data-aos-delay="1500"
             data-aos-duration="800"
             data-aos-easing="ease-in-out-sine"
@@ -107,23 +114,23 @@
           <div
             class="information_button button"
             data-aos="fade-up"
-            data-aos-offset="100"
-            data-aos-duration="800"
+            data-aos-offset="0"
             data-aos-delay="2300"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out-sine"
             data-aos-mirror="false"
             data-aos-once="true"
             data-aos-anchor-placement="top"
+            id="get-started-btn"
           >
-            <button class="text-gradient" id="get-started-btn">
-              Get Started
-            </button>
+            <button class="text-gradient">Get Started</button>
           </div>
         </div>
         <div class="scroll_more">
           <div
             class="scroll_more-wrapper"
             data-aos="fade-up"
-            data-aos-offset="100"
+            data-aos-offset="0"
             data-aos-duration="800"
             data-aos-delay="2900"
             data-aos-mirror="false"
@@ -200,9 +207,9 @@
         </div>
         <div class="row services_all">
           <div
-            class="col-md-4"
+            class="col-md-4 col-xs-12"
             data-aos="zoom-out-up"
-            data-aos-offset="200"
+            data-aos-offset="0"
             data-aos-delay="1400"
             data-aos-duration="800"
             data-aos-easing="ease-in-out-sine"
@@ -272,10 +279,10 @@
             </div>
           </div>
           <div
-            class="col-md-4"
+            class="col-md-4 col-xs-12"
             data-aos="zoom-out-up"
-            data-aos-offset="200"
-            data-aos-delay="2200"
+            data-aos-offset="0"
+            data-aos-delay="1400"
             data-aos-duration="800"
             data-aos-easing="ease-in-out-sine"
             data-aos-mirror="false"
@@ -344,10 +351,10 @@
             </div>
           </div>
           <div
-            class="col-md-4"
+            class="col-md-4 col-xs-12"
             data-aos="zoom-out-up"
-            data-aos-offset="200"
-            data-aos-delay="3000"
+            data-aos-offset="0"
+            data-aos-delay="1400"
             data-aos-duration="800"
             data-aos-easing="ease-in-out-sine"
             data-aos-mirror="false"
@@ -676,9 +683,7 @@
                   <!-- Send -->
                   <div class="row">
                     <div class="col-md-12">
-                      <div class="service_item-button button">
-                        <button id="submit-button" type="submit">Submit</button>
-                      </div>
+                        <button class="service_item-button button normal-text" type="submit">Submit</button>
                     </div>
                   </div>
                 </form>
@@ -689,6 +694,20 @@
         </div>
       </section>
     </main>
+    <ul class="nav_mobile-list">
+      <li id="Home" class="active">
+        <a href="#Home">Home</a>
+      </li>
+      <li id="AboutUs">
+        <a href="#AboutUs">About Us</a>
+      </li>
+      <li id="Services">
+        <a href="#Services">Services</a>
+      </li>
+      <li id="Contact">
+        <a href="#Contact">Contact</a>
+      </li>
+    </ul>
     <footer>
       <div class="container-fluid centerFlexRow">
         <div class="row">
@@ -701,27 +720,25 @@
           </div>
           <!-- Sitemap -->
           <div class="col-md-4">
-            <div class="logo">Sitemap</div>
-            <div class="site-map">
-              <ul>
-                <li class="site-map-item text">
-                  <a href="#Home">Home</a>
-                </li>
-                <li class="site-map-item text">
-                  <a href="#AboutUs">About Us</a>
-                </li>
-                <li class="site-map-item text">
-                  <a href="#Services">Services</a>
-                </li>
-                <li class="site-map-item text">
-                  <a href="#Contact">Contact</a>
-                </li>
-              </ul>
-            </div>
+            <div class="text sitemap">Sitemap</div>
+            <ul class="site-map">
+              <li class="site-map-item text">
+                <a href="#Home">Home</a>
+              </li>
+              <li class="site-map-item text">
+                <a href="#AboutUs">About Us</a>
+              </li>
+              <li class="site-map-item text">
+                <a href="#Services">Services</a>
+              </li>
+              <li class="site-map-item text">
+                <a href="#Contact">Contact</a>
+              </li>
+            </ul>
           </div>
           <!-- Get in touch -->
           <div class="col-md-4">
-            <div class="logo">Get in Touch</div>
+            <div class="text touch">Get in Touch</div>
             <div class="logo_description text">hi@larva.dev</div>
             <div class="logo_description text">(780) 807 - 7788</div>
           </div>
